@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>My Website</title>
+</head>
+
+<body>
+    <H2 class="mt-2 ml-3" >Update form</H2>
+
+    <div class="container">
+        <form id="update_form" onsubmit="updateProduct(event)">
+
+            <div class="form-group">
+                
+                <input type="hidden" class="form-control" id="proId" placeholder="Id of the Product">
+            </div>
+            <div class="form-group">
+                <label for="update_name">Name of the product</label>
+                <input type="text" class="form-control" id="update_name" placeholder="Name of the Product">
+            </div>
+            <div class="form-group">
+                <label for="update_price">Price of the product</label>
+                <input type="number" class="form-control" id="update_price" placeholder="Price of the Product">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+    <!--  -->
+
+    <script src="update_product.js"></script>
+</body>
+
+</html>
