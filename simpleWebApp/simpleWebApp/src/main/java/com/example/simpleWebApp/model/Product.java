@@ -15,11 +15,22 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int proId;
     private String proName;
+    private String proBrand;
+
+    public String getProBrand() {
+        return proBrand;
+    }
+
+    public void setProBrand(String proBrand) {
+        this.proBrand = proBrand;
+    }
+
     private int price;
 
-    public Product(int proId, String proName, int price) {
+    public Product(int proId, String proName, String proBrand, int price) {
         this.proId = proId;
         this.proName = proName;
+        this.proBrand = proBrand;
         this.price = price;
     }
 

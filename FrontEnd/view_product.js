@@ -41,9 +41,10 @@ async function fetchProduct() {
                 row.innerHTML = `
                     
                     <td> ${product.proName} </td>
+                    <td> ${product.proBrand} </td>
                     <td> ${product.price} </td>
                     <td> <button onclick="delelteProduct('${product.proId}')" class="btn btn-primary mt-2"> Delete </button> </td>
-                    <td> <button onclick="updateProduct( ${product.proId}, '${product.proName}', '${product.price}')" class="btn btn-primary mt-2"> Update </button> </td>
+                    <td> <button onclick="updateProduct( ${product.proId}, '${product.proName}', '${product.proBrand}' , '${product.price}')" class="btn btn-primary mt-2"> Update </button> </td>
                 `;
 
                 tableBody.appendChild(row)
@@ -68,8 +69,8 @@ async function delelteProduct(id) {
     }
 }
 
-function updateProduct(id, name, price){
-    window.location.href = `update.html?id=${id}&name=${name}&price=${price}`;
+function updateProduct(id, name, brand, price){
+    window.location.href = `update.html?id=${id}&name=${name}&brand=${brand}&price=${price}`;
 }
 
 function redirectAddProduct(){

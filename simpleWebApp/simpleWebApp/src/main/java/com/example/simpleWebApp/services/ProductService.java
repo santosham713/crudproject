@@ -35,6 +35,7 @@ public class ProductService {
         if(product.isPresent()){
             Product pro = product.get();
             pro.setProName(prod.getProName());
+            pro.setProBrand(prod.getProBrand());
             pro.setPrice(prod.getPrice());
             return repo.save(pro);
         }else {

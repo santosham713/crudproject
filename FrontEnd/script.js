@@ -5,9 +5,10 @@ async function handleSumbit(event) {
     event.preventDefault();
 
     const proName = document.getElementById("name").value;
+    const proBrand = document.getElementById("brand").value;
     const price = document.getElementById("price").value;
 
-    const product = { proName, price };
+    const product = { proName, proBrand, price };
 
     console.log("this is your data of product " + JSON.stringify(product));
 

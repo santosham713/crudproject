@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("proId").value = URLParams.get('id');
     document.getElementById("update_name").value = URLParams.get('name');
+    document.getElementById("update_brand").value = URLParams.get('brand');
     document.getElementById("update_price").value = URLParams.get('price');
 
 });
@@ -14,9 +15,10 @@ async function updateProduct(event) {
 
     const id = document.getElementById("proId").value;
     const proName = document.getElementById("update_name").value;
+    const proBrand = document.getElementById("update_brand").value;
     const price = document.getElementById("update_price").value;
 
-    const product = { proName, price }
+    const product = {proName, proBrand, price}
 
     console.log("Your converted data is " + JSON.stringify(product))
 
